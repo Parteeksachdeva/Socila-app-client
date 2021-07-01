@@ -1,0 +1,22 @@
+.login{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login>form{
+    display: flex;
+    flex-direction: column;
+}
+.login>form>input{
+    margin: 5px;
+    padding: 10px;
+    width: 400px;
+}
+.login>form{
+    margin: 5px;
+}
+.login__sub{
+    display: flex;
+}
