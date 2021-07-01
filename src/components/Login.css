@@ -20,3 +20,8 @@
 .login__sub{
     display: flex;
 }
+.login>form>button{
+    margin: 5px;
+    padding: 10px;
+    width: 400px;
+}

@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import {useHistory } from 'react-router-dom';
-export const DashBoard = () => {
+import DashBoard_body from './DashBoard_body';
+export const DashBoard = ({Authuser}) => {
 
-    
     useEffect(() => {
         let token = localStorage.getItem('user');
         if(!token) {
@@ -18,7 +18,9 @@ export const DashBoard = () => {
     }
     return (
         <div className="dashboard">
+            {/* header */}
             <button onClick={Logout}>Logout</button>
+            <DashBoard_body />
         </div>
     )
 }

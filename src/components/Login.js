@@ -56,7 +56,7 @@ export const Login = ({type}) => {
                <input placeholder="Username" onChange={(e)=>{setUser({...user, username:e.target.value})}}/>
                <input placeholder="password" type="password" onChange={(e)=>{setUser({...user, password:e.target.value})}}/>
                {/* <input type="submit"/> */}
-               <button type="submit">Sub</button>
+               <button type="submit">{`${register ? "Register" : "LogIn"}`}</button>
                <p>{error}</p>
            </form>
           <div className="login__sub"><p>{`${register ? "Already Registered?" : "New User? "}`}</p>  <div onClick={handleComponent}>{`${register ? "LogIn" : "SignIn"}`}</div></div>
