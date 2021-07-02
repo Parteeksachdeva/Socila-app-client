@@ -14,6 +14,7 @@ export const DashBoard = ({Authuser}) => {
     let history = useHistory();
     function Logout(){
         window.localStorage.removeItem("user");
+        window.localStorage.removeItem("username");
         history.push("/login");
     }
     return (

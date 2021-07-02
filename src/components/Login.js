@@ -30,10 +30,8 @@ export const Login = ({type}) => {
         e.preventDefault();
         if(register){
             axios.post(`http://localhost:8000/register`, user)
-            .then(res => {
-                localStorage.setItem('user', res.data.token); 
-                history.push("/dashboard");
-                console.log(res.data);
+            .then(res => { 
+                history.push("/login");
             })
             .catch((err)=>{setError("User Already Exists")})
         }
@@ -41,6 +39,7 @@ export const Login = ({type}) => {
             axios.post(`http://localhost:8000/login`, user)
             .then(res => {
                 localStorage.setItem('user', res.data.token); 
+                localStorage.setItem('username', user.username); 
                 history.push("/dashboard");
                 console.log(res.data);
             })
